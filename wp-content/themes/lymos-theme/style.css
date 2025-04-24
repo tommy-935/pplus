@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+Theme Name: lymos theme
+Theme URI: https://lymos.com/themes/lymos-theme/
+Author: the lymos team
+Author URI: https://lymos.com/
+Description: It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website.
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lymos
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+*/

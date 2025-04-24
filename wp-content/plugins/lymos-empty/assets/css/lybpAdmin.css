@@ -1,0 +1,95 @@
+.lybp-tab{
+	display: flex;
+}
+.tab-item{
+	border-right: 0.4px solid #fff;
+	padding: 20px 10px;
+	background-color: #efefef;
+	cursor: pointer;
+}
+.tab-item.active{
+	background-color: #fff;
+	color: #000;
+}
+.tab-item:nth-child(3){
+	border-right: none;
+}
+.lybp-title{
+	padding: 20px;
+	background-color: #fff;
+}
+.lybp-cont{
+	background-color: #fff;
+	padding: 20px;
+}
+.lybp-cont-tab.active{
+	display: block;
+}
+.lybp-cont-tab{
+	display: none;
+}
+.lybp-form-item{
+	padding: 6px;
+	display: flex;
+}
+.lybp-form-item label{
+	padding-right: 10px;
+	text-align: right;
+	height: 36px;
+	line-height: 36px;
+	display: block;
+	width: 6%;
+}
+.lybp-form-item input[type=text]{
+	height: 36px;
+	width: 20%;
+}
+.lybp-btn{
+	background-color: #1aaa12;
+	padding: 10px 40px;
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-left: 10%;
+}
+.lybp-loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 9999;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    background-image: url("../image/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+.lybp-table{
+	border-spacing: 0;
+}
+.lybp-table td,.lybp-table th{
+	padding: 16px;
+	border-bottom: 1px solid #efefef;
+}
+.lybp-table tbody tr:nth-child(2n){
+	background-color: #efefef;
+}
+.lybp-page{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.lybp-page a, .lybp-page > span{
+	margin-right: 10px;
+}
+.lybp-page a{
+	text-decoration: none;
+	color: #ccc;
+	cursor: default;
+}
+.lybp-page a.active{
+	color: blue;
+	cursor: pointer;
+}

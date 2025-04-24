@@ -1,0 +1,13 @@
+<wpml-config>
+	<admin-texts>
+		<key name="woofc_cart_title_text" />
+		<key name="woofc_cart_empty_cart_text" />
+		<key name="woofc_cart_button_text" />
+		<key name="woofc_checkout_button_text" />
+		<key name="woofc_cart_related_products_text" />
+		<key name="woofc_cart_cross_sells_products_text" />
+		<key name="woofc_cart_coupon_applied_text" />
+		<key name="woofc_cart_coupon_removed_text" />
+		<key name="woofc_cart_coupons_expiry_date_text" />
+	</admin-texts>
+</wpml-config>

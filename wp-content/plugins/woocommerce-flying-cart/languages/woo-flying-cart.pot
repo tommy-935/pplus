@@ -1,0 +1,744 @@
+# Copyright (C) 2022 WeCreativez
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Flying Cart 1.6.1\n"
+"Report-Msgid-Bugs-To: https://wecreativez.com/support/\n"
+"POT-Creation-Date: 2022-11-13 17:56:04+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: includes/admin/class-woofc-admin-menu.php:21
+#: includes/admin/class-woofc-admin-menu.php:22
+#: includes/admin/class-woofc-admin-no-woocommerce.php:21
+#: includes/admin/class-woofc-admin-no-woocommerce.php:22
+msgid "Woo Flying Cart"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-menu.php:31
+#: includes/admin/class-woofc-admin-menu.php:32
+#: includes/admin/views/html-admin-plugin-support-page.php:2
+msgid "Plugin Support"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-notices.php:36
+msgid ""
+"Follow us on Envato and get the lastest updates. <a "
+"href=\"https://codecanyon.net/user/wecreativez/follow\">Follow us now</a>"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-notices.php:62
+msgid ""
+"<strong>WooCommerce Flying Cart</strong> is activate but not working "
+"properly. Please disable the <code>Add to cart redirection</code> from "
+"WooCommerce settings."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-notices.php:63
+msgid ""
+"Disable the <code>Add to cart redirection</code>, go to the "
+"<strong>WooCommerce > Settings > Products (tab) > Add to cart behaviour > "
+"Redirect to the cart page after successful addition</strong> and disable "
+"the option and save the changes."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:260
+msgid "<a href=\"%s\" class=\"thickbox open-plugin-details-modal\">View details</a>"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:264
+msgid "<a href=\"%s\">Check for updates</a>"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:286
+msgid " To receive automatic updates license activation is required."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:287
+msgid " Please visit plugin settings to activate your %s."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:288
+msgid " <a href=\"%s\" target=\"_blank\">Click here</a> to manage site."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:305
+msgid "Activate %s"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:306
+msgid ""
+"Please enter your purchase code. Purchasing plugin license also grants "
+"access to premium support and auto-updates."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:308
+msgid "Envato Purchase Code"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:309
+msgid "Activate Plugin"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:312
+msgid ""
+"Important! One standard license is valid for only 1 website. Running "
+"multiple websites on a single license is a copyright violation."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:314
+msgid ""
+"If you plan to use this plugin for several different domains, please <a "
+"href=\"%s\">purchase additional licenses</a> for each of them."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:316
+#: includes/admin/class-woofc-admin-plugin-updater.php:331
+msgid "Manage site"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:317
+#: includes/admin/class-woofc-admin-plugin-updater.php:332
+msgid "What is my purchase code?"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:318
+#: includes/admin/class-woofc-admin-plugin-updater.php:333
+msgid "Need our help?"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:319
+#: includes/admin/class-woofc-admin-plugin-updater.php:334
+msgid "License agreement"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:325
+msgid "Deactivate %s"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:328
+msgid "Deactivate Plugin"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:370
+#: includes/admin/class-woofc-admin-plugin-updater.php:444
+msgid "Missing purchase code."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:374
+#: includes/admin/class-woofc-admin-plugin-updater.php:448
+msgid "Invalid purchase code."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:378
+msgid "Purchase code is blocked, please <a href=\"%s\">contact us</a>."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:382
+#: includes/admin/class-woofc-admin-plugin-updater.php:452
+msgid "Missing item ID."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:386
+msgid "Invalid item."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:390
+msgid "Missing website URL."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:394
+msgid ""
+"Your license key has reached its activation limit. <a href=\"%s\" "
+"target=\"_blank\">Click here</a> to manage site."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:402
+#: includes/admin/class-woofc-admin-plugin-updater.php:464
+msgid "Unknown error. Please contact us."
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:456
+msgid "Invalid item"
+msgstr ""
+
+#: includes/admin/class-woofc-admin-plugin-updater.php:496
+msgid ""
+"Hola! Would you like to receive automatic updates and unlock premium "
+"support? Please <a href=\"%2$s\">activate</a> your copy of "
+"<srtong>%1$s</srtong>, or <a href=\"%3$s\">purchase a new license</a>"
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:7
+msgid "Need Customization? Hire an Expert."
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:8
+msgid ""
+"We know it’s not easy to find a reliable WordPress expert at a price you "
+"can afford. We have a hand-picked team of professional, reliable, "
+"experienced and FRIENDLY experts."
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:9
+msgid "Hire Us Now"
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:14
+msgid "Customer Support."
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:15
+msgid ""
+"If you need instant support then choose following options. Our support will "
+"reply as soon as possible after you send us a message."
+msgstr ""
+
+#: includes/admin/views/html-admin-plugin-support-page.php:16
+msgid "I Need Support"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Flying Cart"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:10
+msgid "Appearance"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:13
+#: includes/class-woofc-settings.php:267
+msgid "Basic Settings"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:16
+#: includes/class-woofc-settings.php:409
+msgid "Flying Cart Settings"
+msgstr ""
+
+#: includes/admin/views/html-no-woocommerce.php:6
+msgid ""
+"The WooCommerce flying cart feature plugin requires %s 3.0 or greater to be "
+"installed and active."
+msgstr ""
+
+#: includes/class-woofc-init.php:80
+msgid "Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:47
+msgid "Appearance Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:52
+msgid "Display Type"
+msgstr ""
+
+#: includes/class-woofc-settings.php:53
+msgid "Select the layout accoring to your need."
+msgstr ""
+
+#: includes/class-woofc-settings.php:56
+msgid "Floating Box"
+msgstr ""
+
+#: includes/class-woofc-settings.php:57
+msgid "Slide ( Left )"
+msgstr ""
+
+#: includes/class-woofc-settings.php:58
+msgid "Slide ( Right )"
+msgstr ""
+
+#: includes/class-woofc-settings.php:64
+msgid "Primary Background Color"
+msgstr ""
+
+#: includes/class-woofc-settings.php:66 includes/class-woofc-settings.php:78
+#: includes/class-woofc-settings.php:88 includes/class-woofc-settings.php:100
+msgid "Default %s"
+msgstr ""
+
+#: includes/class-woofc-settings.php:67
+msgid "Select the primary background color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:75
+msgid "Primary Text Color"
+msgstr ""
+
+#: includes/class-woofc-settings.php:77
+msgid "Select the primary text color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:86
+msgid "Counter Background Color"
+msgstr ""
+
+#: includes/class-woofc-settings.php:89
+msgid "Select the counter background color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:97
+msgid "Counter Text Color"
+msgstr ""
+
+#: includes/class-woofc-settings.php:99
+msgid "Select the counter text color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:108
+msgid "Dark Mode"
+msgstr ""
+
+#: includes/class-woofc-settings.php:109 includes/class-woofc-settings.php:116
+#: includes/class-woofc-settings.php:327 includes/class-woofc-settings.php:335
+#: includes/class-woofc-settings.php:520 includes/class-woofc-settings.php:555
+#: includes/class-woofc-settings.php:590 includes/class-woofc-settings.php:598
+#: includes/class-woofc-settings.php:621 includes/class-woofc-settings.php:644
+msgid "Enable/ Disable"
+msgstr ""
+
+#: includes/class-woofc-settings.php:109
+msgid "Enable/ Disable the dark mode for flying cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:115
+msgid "AJAX Cart Loader"
+msgstr ""
+
+#: includes/class-woofc-settings.php:116
+msgid "Enable, if your AJAX request taking time to response."
+msgstr ""
+
+#: includes/class-woofc-settings.php:122
+msgid "Add To Cart Animation"
+msgstr ""
+
+#: includes/class-woofc-settings.php:123
+msgid "Select add to cart animation."
+msgstr ""
+
+#: includes/class-woofc-settings.php:126
+msgid "Bounce"
+msgstr ""
+
+#: includes/class-woofc-settings.php:127
+msgid "Flash"
+msgstr ""
+
+#: includes/class-woofc-settings.php:128
+msgid "Rubber Band"
+msgstr ""
+
+#: includes/class-woofc-settings.php:129
+msgid "Shake"
+msgstr ""
+
+#: includes/class-woofc-settings.php:130
+msgid "Swing"
+msgstr ""
+
+#: includes/class-woofc-settings.php:131
+msgid "Tada"
+msgstr ""
+
+#: includes/class-woofc-settings.php:132
+msgid "Jello"
+msgstr ""
+
+#: includes/class-woofc-settings.php:138
+msgid "Cart Icon"
+msgstr ""
+
+#: includes/class-woofc-settings.php:139
+msgid "Select cart icon."
+msgstr ""
+
+#: includes/class-woofc-settings.php:187
+msgid "Or you can select cart image. Only jpg, png allowed."
+msgstr ""
+
+#: includes/class-woofc-settings.php:196
+msgid "Notice Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:202
+msgid "Success Notice"
+msgstr ""
+
+#: includes/class-woofc-settings.php:208
+msgid "Success notice background color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:212
+msgid "Success notice text color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:233
+msgid "Error Notice"
+msgstr ""
+
+#: includes/class-woofc-settings.php:239
+msgid "Error notice background color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:243
+msgid "Error notice text color."
+msgstr ""
+
+#: includes/class-woofc-settings.php:272
+msgid "Cart Trigger X-axis Offset"
+msgstr ""
+
+#: includes/class-woofc-settings.php:274 includes/class-woofc-settings.php:290
+msgid "Enter the value of x-axis ( horizontal ) spacing."
+msgstr ""
+
+#: includes/class-woofc-settings.php:275 includes/class-woofc-settings.php:291
+msgid "In px ( pixels ) only. Default 12px."
+msgstr ""
+
+#: includes/class-woofc-settings.php:288
+msgid "Cart Trigger Y-axis Offset"
+msgstr ""
+
+#: includes/class-woofc-settings.php:304
+msgid "Cart Trigger Location"
+msgstr ""
+
+#: includes/class-woofc-settings.php:305
+msgid "Select the cart trigger or button location."
+msgstr ""
+
+#: includes/class-woofc-settings.php:308
+msgid "Bottom Right"
+msgstr ""
+
+#: includes/class-woofc-settings.php:309
+msgid "Bottom Left"
+msgstr ""
+
+#: includes/class-woofc-settings.php:315
+msgid "Hide Cart When Empty"
+msgstr ""
+
+#: includes/class-woofc-settings.php:316
+msgid ""
+"Select yes if you want to hide flying cart and cart icon when the cart is "
+"empty."
+msgstr ""
+
+#: includes/class-woofc-settings.php:319
+msgid "Yes"
+msgstr ""
+
+#: includes/class-woofc-settings.php:320
+msgid "No"
+msgstr ""
+
+#: includes/class-woofc-settings.php:326
+msgid "Display On Mobile"
+msgstr ""
+
+#: includes/class-woofc-settings.php:328
+msgid ""
+"Enable this option, if you want to display the flying cart on mobile & "
+"tablet."
+msgstr ""
+
+#: includes/class-woofc-settings.php:334
+msgid "Display On Desktop"
+msgstr ""
+
+#: includes/class-woofc-settings.php:336
+msgid ""
+"Enable this option, if you want to display the flying cart on desktop & "
+"laptop."
+msgstr ""
+
+#: includes/class-woofc-settings.php:342
+msgid "Display By Pages"
+msgstr ""
+
+#: includes/class-woofc-settings.php:343
+msgid "Everywhere"
+msgstr ""
+
+#: includes/class-woofc-settings.php:344
+msgid "Enable this option, if you want to display the flying cart on all pages."
+msgstr ""
+
+#: includes/class-woofc-settings.php:350
+msgid "Display floating cart only on selected pages."
+msgstr ""
+
+#: includes/class-woofc-settings.php:366
+msgid "Hide floating cart only on selected pages."
+msgstr ""
+
+#: includes/class-woofc-settings.php:382
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/class-woofc-settings.php:383
+msgid "Enter your custom CSS."
+msgstr ""
+
+#: includes/class-woofc-settings.php:396 includes/class-woofc-settings.php:615
+msgid "Developer Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:399
+msgid "Please do not make changes here without our permission."
+msgstr ""
+
+#: includes/class-woofc-settings.php:400
+msgid "Goto developer settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:414
+msgid "Cart Title"
+msgstr ""
+
+#: includes/class-woofc-settings.php:415
+msgid "Enter your cart title."
+msgstr ""
+
+#: includes/class-woofc-settings.php:421
+msgid "Empty Cart Message"
+msgstr ""
+
+#: includes/class-woofc-settings.php:422
+msgid "Enter your empty cart text."
+msgstr ""
+
+#: includes/class-woofc-settings.php:428
+msgid "Open Cart After Adding products"
+msgstr ""
+
+#: includes/class-woofc-settings.php:429
+msgid "Open cart when product added to cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:435
+msgid "Remove Product Links"
+msgstr ""
+
+#: includes/class-woofc-settings.php:436
+msgid "Remove product links in flying cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:442
+msgid "Hide Product Images"
+msgstr ""
+
+#: includes/class-woofc-settings.php:443
+msgid "Hide product images in flying cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:449
+msgid "Hide Cart Total Price"
+msgstr ""
+
+#: includes/class-woofc-settings.php:450
+msgid "Enable to hide cart total price."
+msgstr ""
+
+#: includes/class-woofc-settings.php:456
+msgid "Cart Button"
+msgstr ""
+
+#: includes/class-woofc-settings.php:458
+msgid "Select cart page."
+msgstr ""
+
+#: includes/class-woofc-settings.php:459 includes/class-woofc-settings.php:486
+msgid "Default <code>%s</code>"
+msgstr ""
+
+#: includes/class-woofc-settings.php:464 includes/class-woofc-settings.php:491
+msgid "None"
+msgstr ""
+
+#: includes/class-woofc-settings.php:476
+msgid "Cart Button Text"
+msgstr ""
+
+#: includes/class-woofc-settings.php:477
+msgid "Enter cart button text."
+msgstr ""
+
+#: includes/class-woofc-settings.php:483
+msgid "Checkout Button"
+msgstr ""
+
+#: includes/class-woofc-settings.php:485
+msgid "Select checkout page."
+msgstr ""
+
+#: includes/class-woofc-settings.php:503
+msgid "Checkout Button Text"
+msgstr ""
+
+#: includes/class-woofc-settings.php:504
+msgid "Enter checkout button text."
+msgstr ""
+
+#: includes/class-woofc-settings.php:513 includes/class-woofc-settings.php:519
+msgid "Related Products"
+msgstr ""
+
+#: includes/class-woofc-settings.php:521
+msgid "You can enable or disable the related products on Flying Cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:527
+msgid "Numbers of Related Products"
+msgstr ""
+
+#: includes/class-woofc-settings.php:528
+msgid "How many related products should be shown?"
+msgstr ""
+
+#: includes/class-woofc-settings.php:538
+msgid "Related Products Text"
+msgstr ""
+
+#: includes/class-woofc-settings.php:539
+msgid "Enter the related products text."
+msgstr ""
+
+#: includes/class-woofc-settings.php:548 includes/class-woofc-settings.php:554
+msgid "Cross-sells Products"
+msgstr ""
+
+#: includes/class-woofc-settings.php:556
+msgid "You can enable or disable the cross-sells products on Flying Cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:562
+msgid "Numbers of Cross-sells Products"
+msgstr ""
+
+#: includes/class-woofc-settings.php:563
+msgid "How many cross-sells products should be shown?"
+msgstr ""
+
+#: includes/class-woofc-settings.php:573
+msgid "Cross-sells Products Text"
+msgstr ""
+
+#: includes/class-woofc-settings.php:574
+msgid "Enter the cross-sells products text."
+msgstr ""
+
+#: includes/class-woofc-settings.php:583
+msgid "Coupon Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:589
+msgid "Show Available Coupons"
+msgstr ""
+
+#: includes/class-woofc-settings.php:591
+msgid "You can enable or disable available coupons on flying cart."
+msgstr ""
+
+#: includes/class-woofc-settings.php:597
+msgid "Show Expiry Date"
+msgstr ""
+
+#: includes/class-woofc-settings.php:599
+msgid "You can enable or disable expiry date on the coupons."
+msgstr ""
+
+#: includes/class-woofc-settings.php:605
+msgid "Expiry Date Text"
+msgstr ""
+
+#: includes/class-woofc-settings.php:606
+msgid "Use %s to show coupon expiry date."
+msgstr ""
+
+#: includes/class-woofc-settings.php:620
+msgid "Debug"
+msgstr ""
+
+#: includes/class-woofc-settings.php:622
+msgid ""
+"By enabling debug option you allow us to view plugin settings, server "
+"environment, installed plugins."
+msgstr ""
+
+#: includes/class-woofc-settings.php:629
+msgid "Reset Settings"
+msgstr ""
+
+#: includes/class-woofc-settings.php:631
+msgid "Reset all settings to default."
+msgstr ""
+
+#: includes/class-woofc-settings.php:632
+msgid "Reset"
+msgstr ""
+
+#: includes/class-woofc-settings.php:636
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/class-woofc-settings.php:643
+msgid "Delete Plugin Setting"
+msgstr ""
+
+#: includes/class-woofc-settings.php:645
+msgid ""
+"If you want to delete plugin settings stored in database then enable this "
+"option and then click on the save changes button. Now delete the plugin "
+"from your plugins page."
+msgstr ""
+
+#: templates/cart-review.php:10
+msgid "Subtotal"
+msgstr ""
+
+#: templates/coupon-form.php:7
+msgid "Have a coupon?"
+msgstr ""
+
+#: templates/coupon-form.php:23
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: templates/coupon-form.php:26
+msgid "Coupon code"
+msgstr ""
+
+#: templates/coupon-form.php:27
+msgid "Apply coupon"
+msgstr ""
+
+#: templates/products.php:56
+msgid "Available on backorder"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://codecanyon.net/item/woocommerce-flying-cart/24900763/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A beautiful way of to display a WooCommerce cart."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WeCreativez"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wecreativez.com/"
+msgstr ""

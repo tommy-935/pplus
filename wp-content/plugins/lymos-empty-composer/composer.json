@@ -1,0 +1,15 @@
+{
+    "name": "root/lymos-wp-plugin",
+    "description": "composer for wp",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "Lymos\\Lwc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lymos"
+        }
+    ]
+}

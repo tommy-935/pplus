@@ -1,0 +1,6 @@
+/* woocommerce css */
+.lymos-theme{
+    .woocommerce span{
+        display: inline-block;
+    }
+}

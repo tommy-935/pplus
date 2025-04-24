@@ -1,0 +1,28 @@
+.lym-popup-m{
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    width: 191px;
+    height: 119px;
+    background-image: url('../images/bg-m.png?v=7');
+    transition: width 0.5s;
+    cursor: pointer;
+    background-color: transparent;
+}
+.lym-popup-toggle-m{
+    width: 30px;
+    height: 119px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background-image: url('../images/click-m-toggle.png?v=5');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.lym-popup-toggle-m-expend{
+    background-image: url('../images/click-m.png?v=5');
+}
+.lym-popup-hide-m{
+    width: 30px;
+}

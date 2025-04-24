@@ -1,0 +1,1 @@
+<?php Xtra_Theme::generate_page( 'woocommerce' );

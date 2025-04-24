@@ -1,0 +1,95 @@
+.lwc-tab{
+	display: flex;
+}
+.tab-item{
+	border-right: 0.4px solid #fff;
+	padding: 20px 10px;
+	background-color: #efefef;
+	cursor: pointer;
+}
+.tab-item.active{
+	background-color: #fff;
+	color: #000;
+}
+.tab-item:nth-child(3){
+	border-right: none;
+}
+.lwc-title{
+	padding: 20px;
+	background-color: #fff;
+}
+.lwc-cont{
+	background-color: #fff;
+	padding: 20px;
+}
+.lwc-cont-tab.active{
+	display: block;
+}
+.lwc-cont-tab{
+	display: none;
+}
+.lwc-form-item{
+	padding: 6px;
+	display: flex;
+}
+.lwc-form-item label{
+	padding-right: 10px;
+	text-align: right;
+	height: 36px;
+	line-height: 36px;
+	display: block;
+	width: 6%;
+}
+.lwc-form-item input[type=text]{
+	height: 36px;
+	width: 20%;
+}
+.lwc-btn{
+	background-color: #1aaa12;
+	padding: 10px 40px;
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-left: 10%;
+}
+.lwc-loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 9999;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    background-image: url("../image/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+.lwc-table{
+	border-spacing: 0;
+}
+.lwc-table td,.lwc-table th{
+	padding: 16px;
+	border-bottom: 1px solid #efefef;
+}
+.lwc-table tbody tr:nth-child(2n){
+	background-color: #efefef;
+}
+.lwc-page{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.lwc-page a, .lwc-page > span{
+	margin-right: 10px;
+}
+.lwc-page a{
+	text-decoration: none;
+	color: #ccc;
+	cursor: default;
+}
+.lwc-page a.active{
+	color: blue;
+	cursor: pointer;
+}

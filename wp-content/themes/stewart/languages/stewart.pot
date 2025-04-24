@@ -1,0 +1,277 @@
+# Copyright (C) 2022 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Stewart 1.14\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/stewart\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-09T04:37:45+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: stewart\n"
+
+#. Theme Name of the theme
+msgid "Stewart"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://wordpress.com/theme/stewart"
+msgstr ""
+
+#. Description of the theme
+msgid "Stewart is a modern blogging theme with a left sidebar. Its default color scheme is a striking combination of orange and light gray, to give your blog a sophisticated appearance from day one."
+msgstr ""
+
+#. Author of the theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://automattic.com/"
+msgstr ""
+
+#: functions.php:44
+msgid "Images"
+msgstr ""
+
+#: functions.php:45
+msgid "Featured"
+msgstr ""
+
+#: functions.php:46
+msgid "Footers"
+msgstr ""
+
+#: functions.php:47
+msgid "Pages"
+msgstr ""
+
+#: functions.php:48
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:49
+msgid "Query"
+msgstr ""
+
+#. Translators: WordPress link.
+#: patterns/footer-default.php:21
+#: patterns/footer-left.php:22
+#: patterns/footer-nav-left.php:24
+#: patterns/footer-nav-right.php:22
+#: patterns/footer-right.php:22
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: patterns/footer-default.php:22
+#: patterns/footer-left.php:23
+#: patterns/footer-nav-left.php:25
+#: patterns/footer-nav-right.php:23
+#: patterns/footer-right.php:23
+msgid "https://wordpress.org"
+msgstr ""
+
+#: patterns/header-image.php:12
+#: patterns/page-contact.php:13
+#: patterns/sidebar-background.php:14
+msgid "An abstract image featuring a brushstroke."
+msgstr ""
+
+#: patterns/page-about.php:12
+msgid "Jenn<br>Stewart"
+msgstr ""
+
+#: patterns/page-about.php:21
+msgid "The artist: handsome, clever, and rich, with a comfortable home and happy disposition, seemed to unite some of the best blessings of existence; and had lived nearly twenty-one years in the world with very little to distress or vex her."
+msgstr ""
+
+#: patterns/page-about.php:28
+#: patterns/sidebar-introduction.php:11
+msgid "A collage featuring the portrait of a woman."
+msgstr ""
+
+#: patterns/page-about.php:36
+msgid "Experience"
+msgstr ""
+
+#: patterns/page-about.php:46
+msgid "The mildness of her temper had hardly allowed her to impose any restraint."
+msgstr ""
+
+#: patterns/page-about.php:58
+msgid "Awards"
+msgstr ""
+
+#: patterns/page-about.php:69
+msgid "Seems to unite some of the best blessings of existence."
+msgstr ""
+
+#: patterns/page-about.php:74
+msgid "Nearly twenty-one years in the world with very little to distress or vex her."
+msgstr ""
+
+#: patterns/page-contact.php:25
+msgid "Twitter"
+msgstr ""
+
+#: patterns/page-contact.php:33
+msgid "Email"
+msgstr ""
+
+#: patterns/page-contact.php:41
+msgid "Instagram"
+msgstr ""
+
+#: patterns/page-contact.php:51
+msgid "@twitter"
+msgstr ""
+
+#: patterns/page-contact.php:59
+msgid "email@example.com"
+msgstr ""
+
+#: patterns/page-contact.php:67
+msgid "@instagram"
+msgstr ""
+
+#: patterns/page-contact.php:79
+msgid "The artist: handsome, and clever, with a comfortable home and happy disposition, seemed to unite some of the best blessings of existence; and had lived nearly twenty-one years in the world with very little to distress or vex her."
+msgstr ""
+
+#: patterns/sidebar-blogging.php:17
+msgid "Start here"
+msgstr ""
+
+#: patterns/sidebar-blogging.php:35
+msgid "Archives"
+msgstr ""
+
+#: patterns/sidebar-blogging.php:49
+msgid "Latest Comments"
+msgstr ""
+
+#: patterns/sidebar-categories-tags.php:17
+msgid "Categories"
+msgstr ""
+
+#: patterns/sidebar-categories-tags.php:31
+msgid "Tags"
+msgstr ""
+
+#: patterns/sidebar-introduction.php:20
+msgid "Welcome to the blog! I’m an artist and author who writes about her process and inspiration. Follow along as I explore new mediums, submit my work to galleries, and ultimately pursue a career in art."
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Tiny"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Gigantic"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Work Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Background and Foreground"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and background"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Header and Footer Only"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Sidebar and Footer Only"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header with Site Title and Navigation"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
