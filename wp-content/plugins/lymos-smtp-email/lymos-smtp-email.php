@@ -78,6 +78,8 @@ class lymosSmtpEmail{
 	private function _requireFile(){
 		require_once LYMOS_SMTP_DIR . '/admin/lib/lseAdmin.php';
 		$this->lymos_smtp_adminlib_obj = new \lymosSmtpEmail\admin\lib\lseAdmin;
+		require_once LYMOS_SMTP_DIR . '/admin/lib/hooks.php';
+		new \lymosSmtpEmail\admin\lib\Hooks;
 
 		if(is_admin()){
             $this->_requireAdminFile();

@@ -6,6 +6,9 @@ if(! defined('LYMOS_SMTP_NONCE')){
 	define('LYMOS_SMTP_NONCE', 'lymos-smtp-email');
 }
 $nonce = wp_create_nonce( LYMOS_SMTP_NONCE );
+$license_obj = new \Lopss\License\checkLicense();
+$license_data = $license_obj->check();
+$license_status = $license_data['status'];
 ?>
 <h2 class="lse-title">
 	<?php echo esc_html(__('Lymos Smtp Email', 'lymos-smtp-email')); ?>
@@ -24,6 +27,12 @@ $nonce = wp_create_nonce( LYMOS_SMTP_NONCE );
 	</div>
 	<div class="tab-item" data-target="tab-record">
 		<?php echo esc_html(__('Email Records', 'lymos-smtp-email')); ?>
+	</div>
+	<div class="tab-item" data-target="tab-template">
+		<?php echo esc_html(__('Email Template', 'lymos-smtp-email')); ?>
+	</div>
+	<div class="tab-item" data-target="tab-upgrde-pro">
+		<?php echo esc_html(__('Upgrade Pro', 'lymos-smtp-email')); ?>
 	</div>
 </div>
 
@@ -131,6 +140,44 @@ $nonce = wp_create_nonce( LYMOS_SMTP_NONCE );
 			<span><span class="total-items" id="total-items"></span>&nbsp;<?php echo esc_html(__('items', 'lymos-smtp-email')); ?></span>
 			<span><span id="page" class="page"></span>&nbsp;<?php echo esc_html(__('of', 'lymos-smtp-email')); ?>&nbsp;<span id="total-page" class="total-page"></span></span>
 		</div>
+	</div>
+
+	<div class="lse-cont-tab tab-template">
+		<?php 
+		if($license_status == 'valid'){
+		?>
+			<form class="lse-form">
+			<input type="hidden" name="_wpnonce" id="lymos-email-nonce3" value="<?php echo esc_html($nonce); ?>">
+				<div class="lse-form-item">
+					<label><?php echo esc_html(__('License Key', 'lymos-smtp-email')); ?></label>
+					<input type="text" name="lymos_smtp_license" placeholder="<?php echo esc_html(__('License Key', 'lymos-smtp-email')); ?>" value="">
+				</div>
+				<div class="lse-form-item">
+					<button class="lse-btn" id="lse-btn-license" type="button"><?php echo esc_html(__('Upgrade Pro', 'lymos-smtp-email')); ?></button>
+				</div>
+			</form>
+		<?php 
+		}else{ 
+		?>
+			<div class="lse-form-item">
+				<button class="lse-btn" id="lse-btn-license" type="button"><?php echo esc_html(__('Upgrade Pro', 'lymos-smtp-email')); ?></button>
+			</div>
+		<?php
+		}
+		?>
+	</div>
+
+	<div class="lse-cont-tab tab-upgrade-pro">
+		<form class="lse-form">
+		<input type="hidden" name="_wpnonce" id="lymos-email-nonce3" value="<?php echo esc_html($nonce); ?>">
+			<div class="lse-form-item">
+				<label><?php echo esc_html(__('License Key', 'lymos-smtp-email')); ?></label>
+				<input type="text" name="lymos_smtp_license" placeholder="<?php echo esc_html(__('License Key', 'lymos-smtp-email')); ?>" value="">
+			</div>
+			<div class="lse-form-item">
+				<button class="lse-btn" id="lse-btn-license" type="button"><?php echo esc_html(__('Upgrade Pro', 'lymos-smtp-email')); ?></button>
+			</div>
+		</form>
 	</div>
 </div>
 <div class="lse-loading" id="lse-loading"></div>

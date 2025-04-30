@@ -134,6 +134,23 @@ jQuery(function($){
 		});
 	});
 
+	$("#lse-btn-license").on("click", function(){
+		var $this = $(this);
+		var $form = $this.parents("form");
+		var form_data = $form.serialize();
+		$lymos_loading.show();
+		form_data += "&action=checkLicense";
+		$.ajax({
+			type: "POST",
+			data: form_data,
+			url: ajaxurl,
+			success: function(res){
+				$lymos_loading.hide();
+				alert(res.data);
+			}
+		});
+	});
+
 	$("#lse-list-search").on("click", function(){
        lse.getList();
     });
