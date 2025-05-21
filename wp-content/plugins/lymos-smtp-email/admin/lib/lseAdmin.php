@@ -1,20 +1,43 @@
 <?php
 namespace lymosSmtpEmail\admin\lib;
+use Lopss\License\checkLicense;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+require_once LYMOS_SMTP_PATH . 'license/checkLicense.php';
+require_once LYMOS_SMTP_PATH . 'admin/lib/lseAdminTrait.php';
 class lseAdmin{
 
 	public $config = [];
+	public $db;
+	public $checkLicense;
+
+	use lseAdminTrait;
 
     public function __construct(){
+		global $wpdb;
+		$this->db = $wpdb;
         $this->_addHooks();
+		$this->checkLicense = new checkLicense;
     }
 
     private function _addHooks(){
         add_action( 'phpmailer_init', array( $this, 'initSmtp' ), 999 );
 		add_action('wp_mail_succeeded', [$this, 'successAfter'], 999);
+		add_action('wp_mail_failed', [$this, 'failedAfter'], 999);
+		$atts = apply_filters( 'wp_mail', compact( 'to', 'subject', 'message', 'headers', 'attachments' ) );
     }
+
+	public function fitlerEmailContent($data){
+		if($this->c('lymos_smtp_opened') && $this->checkLicense->check()['status'] == 'valid'){
+			$key = $this->successAfter($data, true);
+			$data['message'] .= $data['message'] . $this->genTrackingCode($key);
+			$data['had_inserted'] = $key;
+		}
+		return $data;
+	}
 
 	/* @param array $mail_data {
 		*     An array containing the email recipient(s), subject, message, headers, and attachments.
@@ -26,17 +49,54 @@ class lseAdmin{
 		*     @type string[] $attachments Paths to files to attach.
 		* }
 	*/
-	public function successAfter($mail_data){
+	public function successAfter($mail_data, $is_return = false){
 		if(! $this->c('lymos_smtp_record')){
 			return ;
 		}
+		$key = wp_generate_uuid4();
 		$data = [
 			'email' => implode(',', $mail_data['to']),
+			'key' => $key,
 			'subject' => $mail_data['subject'],
 			'body' => $mail_data['message'],
 			'added_date' => gmdate('Y-m-d H:i:s')
 		];
+		if($is_return){
+			$data['status'] = 'Wait';
+		}
 		global $wpdb;
+		if(isset($mail_data['had_inserted'])){
+			$data = ['status' => 'Success'];
+			$wpdb->update($wpdb->prefix . 'lymoswp_email_record', $data, ['key' => $mail_data['had_inserted']]);
+			return ;
+		}
+		$wpdb->insert($wpdb->prefix . 'lymoswp_email_record', $data); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		if($is_return){
+			return $key;
+		}
+	}
+
+	public function failedAfter($error_data){
+		if(! $this->c('lymos_smtp_record')){
+			return ;
+		}
+		$mail_data = $error_data->mail_data;
+		$data = [
+			'email' => implode(',', $mail_data['to']),
+			'key' => wp_generate_uuid4(),
+			'subject' => $mail_data['subject'],
+			'body' => $mail_data['message'],
+			'added_date' => gmdate('Y-m-d H:i:s'),
+			'status' => 'Failed',
+			'error_message' => $error_data->error->get_error_message()
+		];
+		global $wpdb;
+		if(isset($mail_data['had_inserted'])){
+			$data = ['status' => 'Failed'];
+			$wpdb->update($wpdb->prefix . 'lymoswp_email_record', $data, ['key' => $mail_data['had_inserted']]);
+			return ;
+		}
+		
 		$wpdb->insert($wpdb->prefix . 'lymoswp_email_record', $data); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 	}
 
@@ -63,6 +123,36 @@ class lseAdmin{
 		if(isset($res['error']) && $res['error']){
 			return wp_send_json(['status' => 1, 'data' => __('sended failed ', 'lymos-smtp-email') . $res['error']]);
 		}
+        return wp_send_json(['status' => 0, 'data' => __('sended success', 'lymos-smtp-email')]);
+    }
+
+	public function genTrackingCode($key){
+		$html = '<div style="display: none;"><img src="' . home_url('wp-admin/admin-ajax.php?action=lymos_smtp_opened&key=' . $key . '&_wpnonce=' . wp_create_nonce(LYMOS_SMTP_NONCE) . '"></div>');
+		return $html;
+	}
+
+	public function resend(){
+		if(! isset( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( wp_kses_post(wp_unslash($_REQUEST['_wpnonce'])), LYMOS_SMTP_NONCE ) ){
+            return wp_send_json(['status' => 0, 'data' => __('send failed', 'lymos-smtp-email')]);
+        }
+		$id = intval(isset($_POST['id']) ? wp_kses_post(wp_unslash($_POST['id'])) : ''); 
+
+        if(! $id){
+            return wp_send_json(['status' => 0, 'data' => __('Params Error', 'lymos-smtp-email')]);
+        }
+		$where = ' and id = %d';
+		$sql = 'select id, email, subject, added_date, body, status from ' . $this->db->prefix . 'lymoswp_email_record where 1=1 ' . $where . ' limit 1';
+
+        $sql_pre = $this->db->prepare($sql, $id);
+        $data = $this->db->get_row($sql_pre, ARRAY_A);
+		if(! $data){
+			return wp_send_json(['status' => 0, 'data' => __('Params Error', 'lymos-smtp-email')]);
+		}
+		$res = $this->testMail($data['email'], $data['subject'], $data['body']);
+		if(isset($res['error']) && $res['error']){
+			return wp_send_json(['status' => 1, 'data' => __('sended failed ', 'lymos-smtp-email') . $res['error']]);
+		}
+		$this->db->update($this->db->prefix . 'lymoswp_email_record', ['status' => 'Success'], ['id' => $id]);
         return wp_send_json(['status' => 0, 'data' => __('sended success', 'lymos-smtp-email')]);
     }
 
@@ -327,6 +417,37 @@ class lseAdmin{
 			$configured = false;
 		}
 		return $configured;
+	}
+
+	public function isLicenseValid() {
+		return $this->checkLicense->check();
+	}
+
+	public function autoSendFailedEmail(){
+		// check License
+		$license = $this->isLicenseValid();
+		if($license['status'] == 'invalid'){
+			return ;
+		}
+
+		if(! $this->c('lymos_smtp_auto_resend')){
+			return;
+		}
+		$where = ' and status = %s and resend_times < 2';
+		$sql = 'select id, email, subject, added_date, body, status, resend_times from ' . $this->db->prefix . 'lymoswp_email_record where 1=1 ' . $where . ' limit 100';
+
+        $sql_pre = $this->db->prepare($sql, 'Failed');
+        $data = $this->db->get_results($sql_pre, ARRAY_A);
+		foreach ($data as $item) { 
+			$this->db->update($this->db->prefix . 'lymoswp_email_record', ['status' => 'Sending'], ['id' => $item['id']]);
+			$ret = $this->testMail($item['email'], $item['subject'], $item['body']);
+			if($ret['error']){
+				$this->db->update($this->db->prefix . 'lymoswp_email_record', ['resend_times' => $item['resend_times'] + 1, 'status' => 'Failed'], ['id' => $item['id']]);
+			}else{
+				$this->db->update($this->db->prefix . 'lymoswp_email_record', ['status' => 'Success'], ['id' => $item['id']]);
+			}
+		}
+
 	}
 
 }

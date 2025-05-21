@@ -72,6 +72,14 @@ $license_status = $license_data['status'];
             	<label><?php echo esc_html(__('Record Logs On', 'lymos-smtp-email')); ?></label>
             	<input type="checkbox" name="lymos_smtp_record" <?php echo get_option('lymos_smtp_record') ? 'checked' : ''; ?>>
             </div>
+			<div class="lse-form-item">
+            	<label><?php echo esc_html(__('Opened Email Tracking On', 'lymos-smtp-email')); ?></label>
+            	<input type="checkbox" name="lymos_smtp_opened" <?php echo get_option('lymos_smtp_opened') ? 'checked' : ''; ?>>
+            </div>
+			<div class="lse-form-item">
+            	<label><?php echo esc_html(__('Auto Resend Failed On', 'lymos-smtp-email')); ?></label>
+            	<input type="checkbox" name="lymos_smtp_auto_resend" <?php echo get_option('lymos_smtp_auto_resend') ? 'checked' : ''; ?>>
+            </div>
             <div class="lse-form-item">
             	<label><?php echo esc_html(__('SMTP Username', 'lymos-smtp-email')); ?></label>
             	<input type="text" name="lymos_smtp_username" placeholder="<?php echo esc_html(__('SMTP Username', 'lymos-smtp-email')); ?>" value="<?php echo esc_attr(get_option('lymos_smtp_username')); ?>">
@@ -120,10 +128,16 @@ $license_status = $license_data['status'];
 					<td><?php echo esc_html(__('Subject', 'lymos-smtp-email')); ?></td>
 					<td><?php echo esc_html(__('Body', 'lymos-smtp-email')); ?></td>
 					<td><?php echo esc_html(__('Sent Time', 'lymos-smtp-email')); ?></td>
+					<td><?php echo esc_html(__('Opened', 'lymos-smtp-email')); ?></td>
+					<td><?php echo esc_html(__('Staus', 'lymos-smtp-email')); ?></td>
+					<td><?php echo esc_html(__('Resend', 'lymos-smtp-email')); ?></td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
 					<td>1</td>
 					<td>1</td>
 					<td>1</td>
@@ -181,3 +195,6 @@ $license_status = $license_data['status'];
 	</div>
 </div>
 <div class="lse-loading" id="lse-loading"></div>
+<script>
+	const lymossmtp_license = {status: '<?php echo esc_html($license_status); ?>'};
+</script>

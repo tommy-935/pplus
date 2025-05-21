@@ -51,6 +51,14 @@ class adminView{
         $lymos_smtp_record = $lymos_smtp_record == 'on' ? 1 : 0;
         update_option('lymos_smtp_record', $lymos_smtp_record);
 
+        $lymos_smtp_opened = addslashes(isset($_POST['lymos_smtp_opened']) ? wp_kses_post(wp_unslash($_POST['lymos_smtp_opened'])) : ''); 
+        $lymos_smtp_opened = $lymos_smtp_opened == 'on' ? 1 : 0;
+        update_option('lymos_smtp_opened', $lymos_smtp_opened);
+
+        $lymos_smtp_auto_resend = addslashes(isset($_POST['lymos_smtp_auto_resend']) ? wp_kses_post(wp_unslash($_POST['lymos_smtp_auto_resend'])) : ''); 
+        $lymos_smtp_auto_resend = $lymos_smtp_auto_resend == 'on' ? 1 : 0;
+        update_option('lymos_smtp_auto_resend', $lymos_smtp_auto_resend);
+
 
         return wp_send_json(['status' => 1, 'data' => __('saved success', 'lymos-smtp-email')]);
     }
@@ -69,7 +77,7 @@ class adminView{
         if($keyword){
             $where .= ' and email like "%%s%" ';
         }
-        $sql = 'select id, email, subject, added_date, body from ' . $this->db->prefix . 'lymoswp_email_record where 1=1 ' . $where . ' order by id desc limit ' . ($page - 1) * $pagesize . ',' . $pagesize;
+        $sql = 'select id, email, subject, added_date, body, status, opened from ' . $this->db->prefix . 'lymoswp_email_record where 1=1 ' . $where . ' order by id desc limit ' . ($page - 1) * $pagesize . ',' . $pagesize;
         $sql_count = 'select count(*) as count from ' . $this->db->prefix . 'lymoswp_email_record where 1=1 ' . $where;
 
         $sql_count_pre = $this->db->prepare($sql_count, $keyword);

@@ -26,6 +26,12 @@ jQuery(function($){
                     if(res.status == 1){
                         var html = "";
                         for(var i in res.data.list){
+							var resend = '<a href="javascript:void(0);" class="lse-resend" data-id="{$item.id}">Resend</a>';
+							var opened = item.opened;
+							if(lymosstmp_license == 'invalid'){
+								resend = '<a href="javascript:void(0);" class="lse-resend-pro">Get Pro</a>';
+								opened = '';
+							}
                             var item = res.data.list[i];
                             html += "<tr>" +
                                 '<td>' + item.id + '</td>' +
@@ -34,6 +40,11 @@ jQuery(function($){
                                 `<td><a href="javascript:void(0);" class="lse-showbody">Show Body</a><div class="lse-email-body">
 									<a class="lse-btn-close" href="javascript:void(0);">X</a>` + item.body + "</div></td>" +
                                 "<td>" + item.added_date + "</td>" +
+								"<td>" + opened + "</td>" +
+								"<td>" + item.status + "</td>" +
+								`<td>
+									${resend}
+								</td>` +
                                 "</tr>";
                         }
     					$("#lse-table tbody").html(html);
@@ -123,6 +134,23 @@ jQuery(function($){
 		var form_data = $form.serialize();
 		$lymos_loading.show();
 		form_data += "&action=ajaxSaveMessage";
+		$.ajax({
+			type: "POST",
+			data: form_data,
+			url: ajaxurl,
+			success: function(res){
+				$lymos_loading.hide();
+				alert(res.data);
+			}
+		});
+	});
+
+	$("#lse-resend").on("click", function(){
+		var $this = $(this);
+		
+		var form_data = 'id=' + $this.data("id");
+		$lymos_loading.show();
+		form_data += "&action=lymos_smtp_resend";
 		$.ajax({
 			type: "POST",
 			data: form_data,

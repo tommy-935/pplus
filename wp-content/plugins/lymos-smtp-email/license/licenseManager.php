@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Pro
  * 1. Email logs
  * 2. Resend failed emails
- * 3. Connect multiple WordPress sites
+ * ==== 3. Connect multiple WordPress sites
  * 4. Open email tracking
  * 5. Auto resend failed emails
- * 6. Email quota scheduling
- * 7. Email Templates
+ * ==== 6. Email quota scheduling
+ * ==== 7. Email Templates
  */
 class LicenseManager
 {

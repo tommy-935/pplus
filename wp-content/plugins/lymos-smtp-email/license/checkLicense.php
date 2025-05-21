@@ -22,6 +22,15 @@ class checkLicense {
                 'data' => []
             ];
         }
-        
+    }
+
+    public function verify(){
+        $license = new LicenseManager('lymos-smtp-email', '');
+        if($license->isLicenseValid()){
+            $licenseData = $license->getLicenseData();
+            return true;
+        }else{
+            return false;
+        }
     }
 }
