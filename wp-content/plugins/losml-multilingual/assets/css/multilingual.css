@@ -1,0 +1,207 @@
+.losml-subsubsub{
+    display: block;
+    clear: both;
+}
+.losml-subsubsub li{
+    display: inline-block;
+}
+.losml-edit-item{
+    display: flex;
+    margin-bottom: 10px;
+}
+.losml-edit-item .lang-name{
+    margin-right: 20px;
+}
+.losml-term-switch-box{
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.losml-string-trans-box{
+    border: 1px solid #ddd;
+    padding: 4px;
+    padding-left: 12px;
+    height: 0;
+    transition: height 1s;
+    overflow: hidden;
+}
+.losml-string-item span{
+    color: 555;
+    display: block;
+}
+.losml-string-item{
+    margin-bottom: 20px;
+}
+.losml-string-item textarea{
+    width: 60%;
+    min-height: 80px;
+}
+.losml-show-trans-box{
+    height: auto;
+}
+.big-loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 9999;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+.losml-tab{
+	display: flex;
+}
+.tab-item{
+	border-right: 0.4px solid #fff;
+	padding: 20px 10px;
+	background-color: #efefef;
+	cursor: pointer;
+}
+.tab-item.active{
+	background-color: #fff;
+	color: #000;
+}
+.tab-item:nth-child(3){
+	border-right: none;
+}
+.losml-title{
+	padding: 20px;
+	background-color: #fff;
+}
+.losml-cont{
+	background-color: #fff;
+	padding: 20px;
+}
+.losml-cont-tab.active{
+	display: block;
+}
+.losml-cont-tab{
+	display: none;
+}
+.losml-form-item{
+	padding: 6px;
+	display: flex;
+}
+.losml-form-item label.losml-label{
+	padding-right: 10px;
+	text-align: right;
+	height: 36px;
+	line-height: 36px;
+	display: block;
+	width: 15%;
+}
+.losml-form-item input[type=text]{
+	height: 36px;
+	width: 20%;
+}
+.losml-form-item input[type=checkbox]{
+	margin-top: 11px;
+}
+.losml-form-item textarea{
+    width: 20%;
+    height: 100px;
+}
+.losml-btn{
+	background-color: #1aaa12;
+	padding: 10px 40px;
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-left: 10%;
+}
+.losml-loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 9999;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    background-image: url("../image/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+.losml-loading.none-img{
+	background-image: none;
+	z-index: 1;
+}
+.losml-table{
+	border-spacing: 0;
+}
+.losml-table td,.losml-table th{
+	padding: 16px;
+	border-bottom: 1px solid #efefef;
+}
+.losml-table tbody tr:nth-child(2n){
+	background-color: #efefef;
+}
+.losml-page{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.losml-page a, .losml-page > span{
+	margin-right: 10px;
+}
+.losml-page a{
+	text-decoration: none;
+	color: #ccc;
+	cursor: default;
+}
+.losml-page a.active{
+	color: #1aaa12;
+	cursor: pointer;
+}
+.losml-email-body{
+	display: none;
+}
+body > .losml-email-body{
+	position: absolute;
+	top: 20%;
+	width: 560px;
+	left: 50%;
+	margin-left: -230px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	background-color: #fff;
+	z-index: 2;
+    height: 480px;
+    display: block;
+	overflow: auto;
+}
+body > .losml-email-body .losml-btn-close{
+	float: right;
+	cursor: pointer;
+	color: #ccc;
+	font-size: 1.2rem;
+	text-decoration: none;
+	margin-top: -10px;
+    margin-bottom: 10px;
+}
+.losml-btn-search.losml-btn{
+	margin-left: 20px;
+}
+.losml-email-table{
+	margin-top: 20px;
+}
+.losml-form-tip{
+	margin-bottom: 10px;
+    margin-top: 0px;
+    padding-left: 15%;
+	color: #999;
+	margin-left: 16px;
+}
+.losml-radio-group{
+    margin-right: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
